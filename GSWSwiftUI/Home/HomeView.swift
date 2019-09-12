@@ -11,10 +11,20 @@ import Combine
 struct HomeView: View {
     @ObservedObject var vM = HomeVM()
     var body: some View {
-        VStack {
-             AlbumRow(items: vM.Albums)
-             TrackRow(items: vM.Tracks).background(Color.clear)
-        }.background(Image("background").resizable().aspectRatio(contentMode: .fit))
+        HStack {
+            if vM.viewState == .loading {
+                Text("Loading")
+            }
+            else if vM.viewState == .dataAvail {
+                VStack {
+                    AlbumRow(items: vM.Albums)
+                    TrackRow(items: vM.Tracks)
+                }.background(Image("background").resizable().aspectRatio(contentMode: .fit))
+            }
+            else if vM.viewState == .error  {
+                Text(vM.didError.error)
+            }
+        }
     }
 }
 

@@ -19,33 +19,54 @@ class ErrorType: Identifiable {
         return self.error
     }
 }
+enum ViewState {
+    case error
+    case loading
+    case dataAvail
+}
 class HomeVM: ObservableObject {
+    
+    //Mark: - LifeCycle
+    init() {
+        requestData()
+    }
+    
+    
+    //Mark: - Properties
     let didChange = PassthroughSubject<HomeVM,Never>()
+    
+    @Published var viewState: ViewState = .loading
     var Albums = [Album]() {
         didSet {
-            didChange.send(self)
+            self.didChange.send(self)
         }
     }
     var Tracks = [Track]() {
         didSet {
-            didChange.send(self)
+            self.didChange.send(self)
         }
     }
     var didError = ErrorType(error: "Error") {
         didSet {
-            didChange.send(self)
+            self.didChange.send(self)
         }
     }
-    init() {
-        requestData()
-    }
     func requestData() {
+        DispatchQueue.main.async {
+            self.viewState = .loading
+        }
         GSWNwtwork.requestData(url: "dcd86ebedb5e519fd7b09b79dd4e4558/raw/b7505a54339f965413f5d9feb05b67fb7d0e464e/MvvmExampleApi.json", method: .get, parameters: nil, completion: { (result) in
             switch result {
             case .success(let returnJson) :
                 self.Albums = returnJson["Albums"].arrayValue.compactMap {return Album(data: try! $0.rawData())}
                 self.Tracks = returnJson["Tracks"].arrayValue.compactMap {return Track(data: try! $0.rawData())}
+                DispatchQueue.main.async {
+                    self.viewState = .dataAvail
+                }
             case .failure(let failure) :
+                DispatchQueue.main.async {
+                    self.viewState = .error
+                }
                 switch failure {
                 case .connectionError:
                     self.didError = ErrorType(error: "ConnectionError")
