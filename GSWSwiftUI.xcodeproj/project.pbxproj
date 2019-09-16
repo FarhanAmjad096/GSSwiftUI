@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		62AAF851232FA9BA0060F84C /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAF84E232FA9BA0060F84C /* PageControl.swift */; };
 		62AAF852232FA9BA0060F84C /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAF84F232FA9BA0060F84C /* PageView.swift */; };
 		62AAF853232FA9BA0060F84C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAF850232FA9BA0060F84C /* PageViewController.swift */; };
+		62AAF856232FC3EB0060F84C /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 62AAF855232FC3EB0060F84C /* URLImage */; };
 		84560A802328D5FC00EC8727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84560A7F2328D5FC00EC8727 /* AppDelegate.swift */; };
 		84560A822328D5FC00EC8727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84560A812328D5FC00EC8727 /* SceneDelegate.swift */; };
 		84560A862328D60000EC8727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84560A852328D60000EC8727 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62AAF856232FC3EB0060F84C /* URLImage in Frameworks */,
 				4E1E1DFC2A6C46C480AFACE4 /* Pods_GSWSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +271,9 @@
 			dependencies = (
 			);
 			name = GSWSwiftUI;
+			packageProductDependencies = (
+				62AAF855232FC3EB0060F84C /* URLImage */,
+			);
 			productName = GSWSwiftUI;
 			productReference = 84560A7C2328D5FC00EC8727 /* GSWSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -819,6 +824,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62AAF855232FC3EB0060F84C /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84560A742328D5FC00EC8727 /* Project object */;
 }

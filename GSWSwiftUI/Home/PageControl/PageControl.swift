@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-A view wrapping a UIPageControl.
-*/
+//
+//  PageControl.swift
+//  GSWSwiftUI
+//
+//  Created by Muhammad Irfan Zafar on 11/09/2019.
+//  Copyright © 2019 Muhammad Irfan Zafar. All rights reserved.
+//
 
 import SwiftUI
 
