@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 import Combine
 struct HomeView: View {
    @ObservedObject var vM = HomeVM()
@@ -18,9 +19,11 @@ struct HomeView: View {
             }
             else if vM.viewState == .dataAvail {
                 VStack {
+                    PageView(vM.Albums.map { CardView(album: $0) })
                     AlbumRow(items: $vM.Albums)
                     TrackRow(items: $vM.Tracks)
-                }.background(Image("background").resizable().aspectRatio(contentMode: .fit))
+                }
+                //.background(Image("background").resizable().aspectRatio(contentMode: .fit))
             }
             else if vM.viewState == .error  {
                 Text(vM.didError.error)
@@ -35,9 +38,9 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-struct LegacyScrollView : UIViewRepresentable {
+struct ScrollViewUIKit : UIViewRepresentable {
     // any data state, if needed
-
+    let child = UIHostingController(rootView: HomeView())
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
@@ -49,12 +52,11 @@ struct LegacyScrollView : UIViewRepresentable {
         control.refreshControl?.addTarget(context.coordinator, action:
             #selector(Coordinator.handleRefreshControl),
                                           for: .valueChanged)
-
-        // Simply to give some content to see in the app
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
-        label.text = "Scroll View Content"
-        control.addSubview(label)
-
+        DispatchQueue.main.async {
+            self.child.view.translatesAutoresizingMaskIntoConstraints = false
+            self.child.view.frame = control.bounds
+            control.addSubview(self.child.view)
+        }
         return control
     }
 
@@ -65,15 +67,14 @@ struct LegacyScrollView : UIViewRepresentable {
     }
 
     class Coordinator: NSObject {
-        var control: LegacyScrollView
+        var control: ScrollViewUIKit
 
-        init(_ control: LegacyScrollView) {
+        init(_ control: ScrollViewUIKit) {
             self.control = control
         }
-
         @objc func handleRefreshControl(sender: UIRefreshControl) {
             // handle the refresh event
-
+            control.child.rootView.vM.requestData()
             sender.endRefreshing()
         }
     }

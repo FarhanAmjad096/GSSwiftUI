@@ -16,6 +16,9 @@
 		62099E48232A4FA60097FB4E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E47232A4FA60097FB4E /* Track.swift */; };
 		62099E4A232A77F90097FB4E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E49232A77F90097FB4E /* ActivityIndicator.swift */; };
 		6242161D23293119000B68F5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6242161C23293119000B68F5 /* Album.swift */; };
+		62AAF851232FA9BA0060F84C /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAF84E232FA9BA0060F84C /* PageControl.swift */; };
+		62AAF852232FA9BA0060F84C /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAF84F232FA9BA0060F84C /* PageView.swift */; };
+		62AAF853232FA9BA0060F84C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AAF850232FA9BA0060F84C /* PageViewController.swift */; };
 		84560A802328D5FC00EC8727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84560A7F2328D5FC00EC8727 /* AppDelegate.swift */; };
 		84560A822328D5FC00EC8727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84560A812328D5FC00EC8727 /* SceneDelegate.swift */; };
 		84560A862328D60000EC8727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84560A852328D60000EC8727 /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 		62099E49232A77F90097FB4E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		6242161C23293119000B68F5 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../Album.swift; sourceTree = "<group>"; };
 		624E75DC232B70E0007B0FF8 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		62AAF84E232FA9BA0060F84C /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		62AAF84F232FA9BA0060F84C /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		62AAF850232FA9BA0060F84C /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		67BB5BE026ABA395E005EFF1 /* Pods-GSWSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSWSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-GSWSwiftUIUITests/Pods-GSWSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7F320C9984FEB2130E455340 /* Pods-GSWSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSWSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-GSWSwiftUITests/Pods-GSWSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84560A7C2328D5FC00EC8727 /* GSWSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSWSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +128,16 @@
 				62099E44232A4AFD0097FB4E /* TrackRow.swift */,
 			);
 			path = Track;
+			sourceTree = "<group>";
+		};
+		62AAF854232FA9C40060F84C /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				62AAF84E232FA9BA0060F84C /* PageControl.swift */,
+				62AAF84F232FA9BA0060F84C /* PageView.swift */,
+				62AAF850232FA9BA0060F84C /* PageViewController.swift */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		84560A732328D5FC00EC8727 = {
@@ -191,6 +207,7 @@
 		84560AB52328D6D700EC8727 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				62AAF854232FA9C40060F84C /* PageControl */,
 				62099E46232A4B030097FB4E /* Track */,
 				62099E3D232A1FE00097FB4E /* AlbumView */,
 				84560AAF2328D69E00EC8727 /* HomeVM.swift */,
@@ -461,8 +478,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				62099E45232A4AFD0097FB4E /* TrackRow.swift in Sources */,
+				62AAF853232FA9BA0060F84C /* PageViewController.swift in Sources */,
 				62099E48232A4FA60097FB4E /* Track.swift in Sources */,
+				62AAF851232FA9BA0060F84C /* PageControl.swift in Sources */,
 				84560AB92328DD0800EC8727 /* GSWNwtwork.swift in Sources */,
+				62AAF852232FA9BA0060F84C /* PageView.swift in Sources */,
 				62099E4A232A77F90097FB4E /* ActivityIndicator.swift in Sources */,
 				84560A802328D5FC00EC8727 /* AppDelegate.swift in Sources */,
 				84560A822328D5FC00EC8727 /* SceneDelegate.swift in Sources */,
