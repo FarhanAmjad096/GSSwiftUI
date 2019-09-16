@@ -30,12 +30,14 @@ class HomeVM: ObservableObject {
     init() {
         requestData()
     }
-    
-    
     //Mark: - Properties
     let didChange = PassthroughSubject<HomeVM,Never>()
-    
     @Published var viewState: ViewState = .loading
+    var isLoading: Bool = true {
+        didSet {
+            didChange.send(self)
+        }
+    }
     var Albums = [Album]() {
         didSet {
             self.didChange.send(self)
@@ -51,9 +53,13 @@ class HomeVM: ObservableObject {
             self.didChange.send(self)
         }
     }
+    deinit {
+        print("ViewModel deInit")
+    }
     func requestData() {
         DispatchQueue.main.async {
             self.viewState = .loading
+            //self.isLoading = true
         }
         GSWNwtwork.requestData(url: "dcd86ebedb5e519fd7b09b79dd4e4558/raw/b7505a54339f965413f5d9feb05b67fb7d0e464e/MvvmExampleApi.json", method: .get, parameters: nil, completion: { (result) in
             switch result {
@@ -62,10 +68,12 @@ class HomeVM: ObservableObject {
                 self.Tracks = returnJson["Tracks"].arrayValue.compactMap {return Track(data: try! $0.rawData())}
                 DispatchQueue.main.async {
                     self.viewState = .dataAvail
+                    self.isLoading = false
                 }
             case .failure(let failure) :
                 DispatchQueue.main.async {
                     self.viewState = .error
+                    self.isLoading = false
                 }
                 switch failure {
                 case .connectionError:

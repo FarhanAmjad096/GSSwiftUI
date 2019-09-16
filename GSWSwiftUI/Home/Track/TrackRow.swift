@@ -23,7 +23,7 @@ struct TrackItem: View {
 }
 
 struct TrackRow: View {
-    var items: [Track]
+    @Binding var items: [Track]
     var body: some View {
         List (items) { item in
             TrackItem(track: item)

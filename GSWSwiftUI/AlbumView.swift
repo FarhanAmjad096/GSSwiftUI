@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AlbumRow: View {
-    var items: [Album]
+    @Binding var items: [Album]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(alignment: .top, spacing: 0) {

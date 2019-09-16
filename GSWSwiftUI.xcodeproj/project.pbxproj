@@ -14,7 +14,7 @@
 		62099E43232A288B0097FB4E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E42232A288B0097FB4E /* ImageLoader.swift */; };
 		62099E45232A4AFD0097FB4E /* TrackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E44232A4AFD0097FB4E /* TrackRow.swift */; };
 		62099E48232A4FA60097FB4E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E47232A4FA60097FB4E /* Track.swift */; };
-		62099E4A232A77F90097FB4E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E49232A77F90097FB4E /* LoadingView.swift */; };
+		62099E4A232A77F90097FB4E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E49232A77F90097FB4E /* ActivityIndicator.swift */; };
 		6242161D23293119000B68F5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6242161C23293119000B68F5 /* Album.swift */; };
 		84560A802328D5FC00EC8727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84560A7F2328D5FC00EC8727 /* AppDelegate.swift */; };
 		84560A822328D5FC00EC8727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84560A812328D5FC00EC8727 /* SceneDelegate.swift */; };
@@ -53,8 +53,9 @@
 		62099E42232A288B0097FB4E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		62099E44232A4AFD0097FB4E /* TrackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRow.swift; sourceTree = "<group>"; };
 		62099E47232A4FA60097FB4E /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = GSWSwiftUI/Track.swift; sourceTree = SOURCE_ROOT; };
-		62099E49232A77F90097FB4E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		62099E49232A77F90097FB4E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		6242161C23293119000B68F5 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../Album.swift; sourceTree = "<group>"; };
+		624E75DC232B70E0007B0FF8 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		67BB5BE026ABA395E005EFF1 /* Pods-GSWSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSWSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-GSWSwiftUIUITests/Pods-GSWSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7F320C9984FEB2130E455340 /* Pods-GSWSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSWSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-GSWSwiftUITests/Pods-GSWSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84560A7C2328D5FC00EC8727 /* GSWSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSWSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +157,7 @@
 				84560A8A2328D60000EC8727 /* LaunchScreen.storyboard */,
 				84560A8D2328D60000EC8727 /* Info.plist */,
 				84560A872328D60000EC8727 /* Preview Content */,
+				624E75DC232B70E0007B0FF8 /* MyPlayground.playground */,
 			);
 			path = GSWSwiftUI;
 			sourceTree = "<group>";
@@ -202,7 +204,7 @@
 		84560ABA2328DD1000EC8727 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				62099E49232A77F90097FB4E /* LoadingView.swift */,
+				62099E49232A77F90097FB4E /* ActivityIndicator.swift */,
 				84560AB82328DD0800EC8727 /* GSWNwtwork.swift */,
 				62099E42232A288B0097FB4E /* ImageLoader.swift */,
 			);
@@ -461,7 +463,7 @@
 				62099E45232A4AFD0097FB4E /* TrackRow.swift in Sources */,
 				62099E48232A4FA60097FB4E /* Track.swift in Sources */,
 				84560AB92328DD0800EC8727 /* GSWNwtwork.swift in Sources */,
-				62099E4A232A77F90097FB4E /* LoadingView.swift in Sources */,
+				62099E4A232A77F90097FB4E /* ActivityIndicator.swift in Sources */,
 				84560A802328D5FC00EC8727 /* AppDelegate.swift in Sources */,
 				84560A822328D5FC00EC8727 /* SceneDelegate.swift in Sources */,
 				84560AB42328D6D100EC8727 /* HomeView.swift in Sources */,
