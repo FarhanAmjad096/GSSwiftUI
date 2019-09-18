@@ -10,13 +10,11 @@ import SwiftUI
 import URLImage
 struct TrackItem: View {
     var track: Track
-    let width: CGFloat = 50.0
-    let height: CGFloat = 50.0
     var body: some View {
         HStack {
             URLImage(URL(string: track.trackArtWork)!)
-            .resizable()
-            .frame(width: width, height: height)
+                .resizable()
+                .frame(width: 50.0, height: 50.0)
             Text(verbatim: track.name)
             Spacer()
         }.background(Color.clear)

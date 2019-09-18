@@ -28,7 +28,8 @@ struct HomeView: View {
                  TrackItem(track: item)
                  }.padding(.leading, 20)
                  }
-                 }*/
+                 }
+                 */
                 
                 // With listView Sections
                 NavigationView {
@@ -57,8 +58,7 @@ struct HomeView: View {
                             }
                         }
                     }
-                }.navigationBarTitle(Text("Featured"))
-                    //.foregroundColor(.black))
+                }.navigationBarTitle("Featured")
             }
             else if vM.viewState == .error  {
                 Text(vM.didError.error)

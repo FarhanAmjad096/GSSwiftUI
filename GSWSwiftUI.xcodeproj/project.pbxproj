@@ -16,6 +16,7 @@
 		62099E45232A4AFD0097FB4E /* TrackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E44232A4AFD0097FB4E /* TrackRow.swift */; };
 		62099E4A232A77F90097FB4E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62099E49232A77F90097FB4E /* ActivityIndicator.swift */; };
 		6242161D23293119000B68F5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6242161C23293119000B68F5 /* Album.swift */; };
+		62492AD223321F780087839B /* url-image in Resources */ = {isa = PBXBuildFile; fileRef = 62492AD123321F780087839B /* url-image */; };
 		625C1FA52330EB1000D30664 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C1FA42330EB1000D30664 /* Track.swift */; };
 		625C1FA82330EB8E00D30664 /* HomeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C1FA72330EB8E00D30664 /* HomeDetail.swift */; };
 		625C1FAA2330EEC500D30664 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C1FA92330EEC500D30664 /* AlbumView.swift */; };
@@ -62,6 +63,7 @@
 		62099E44232A4AFD0097FB4E /* TrackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRow.swift; sourceTree = "<group>"; };
 		62099E49232A77F90097FB4E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		6242161C23293119000B68F5 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		62492AD123321F780087839B /* url-image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "url-image"; sourceTree = "<group>"; };
 		624E75DC232B70E0007B0FF8 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		625C1FA42330EB1000D30664 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		625C1FA72330EB8E00D30664 /* HomeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetail.swift; sourceTree = "<group>"; };
@@ -131,12 +133,21 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		62099E46232A4B030097FB4E /* Track */ = {
+		62099E46232A4B030097FB4E /* TracksView */ = {
 			isa = PBXGroup;
 			children = (
 				62099E44232A4AFD0097FB4E /* TrackRow.swift */,
 			);
-			path = Track;
+			path = TracksView;
+			sourceTree = "<group>";
+		};
+		62492AD023321E7F0087839B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				620779B823320F9800BA8544 /* Album.json */,
+				620779BA23320FB200BA8544 /* Track.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		625C1FA12330EAD000D30664 /* Model */ = {
@@ -144,8 +155,7 @@
 			children = (
 				6242161C23293119000B68F5 /* Album.swift */,
 				625C1FA42330EB1000D30664 /* Track.swift */,
-				620779B823320F9800BA8544 /* Album.json */,
-				620779BA23320FB200BA8544 /* Track.json */,
+				62492AD023321E7F0087839B /* Data */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,7 +171,7 @@
 		625C1FA32330EAF900D30664 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				62099E46232A4B030097FB4E /* Track */,
+				62099E46232A4B030097FB4E /* TracksView */,
 				62099E3D232A1FE00097FB4E /* AlbumView */,
 				84560AB32328D6D100EC8727 /* HomeView.swift */,
 				625C1FA72330EB8E00D30664 /* HomeDetail.swift */,
@@ -191,6 +201,7 @@
 		84560A732328D5FC00EC8727 = {
 			isa = PBXGroup;
 			children = (
+				62492AD123321F780087839B /* url-image */,
 				84560A7E2328D5FC00EC8727 /* GSWSwiftUI */,
 				84560A952328D60000EC8727 /* GSWSwiftUITests */,
 				84560AA02328D60000EC8727 /* GSWSwiftUIUITests */,
@@ -406,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62492AD223321F780087839B /* url-image in Resources */,
 				620779BB23320FB200BA8544 /* Track.json in Resources */,
 				84560A8C2328D60000EC8727 /* LaunchScreen.storyboard in Resources */,
 				84560A892328D60000EC8727 /* Preview Assets.xcassets in Resources */,
