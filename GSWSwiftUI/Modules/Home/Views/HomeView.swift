@@ -17,12 +17,48 @@ struct HomeView: View {
                 ActivityIndicator(isAnimating: $vM.isLoading)
             }
             else if vM.viewState == .dataAvail {
-                VStack {
-                    PageView(vM.Albums.map { CardView(album: $0) })
-                    AlbumRow(items: $vM.Albums)
-                    TrackRow(items: $vM.Tracks)
-                }
-                //.background(Image("background").resizable().aspectRatio(contentMode: .fit))
+                // Without listView Sections
+                /*
+                 ScrollView(.vertical, showsIndicators: false) {
+                 VStack {
+                 PageView(vM.Albums.map { CardView(album: $0) }).frame(height: 250)
+                 AlbumRow(items: $vM.Albums)
+                 
+                 ForEach(vM.Tracks) { item in
+                 TrackItem(track: item)
+                 }.padding(.leading, 20)
+                 }
+                 }*/
+                
+                // With listView Sections
+                NavigationView {
+                    List {
+                        PageView(vM.Albums.map { CardView(album: $0) }).frame(height: 250)
+//                        Section(header: Text("New Albums")) {
+//                            ScrollView (.horizontal, showsIndicators: false) {
+//                                HStack {
+//                                    ForEach(vM.Albums) { item in
+//                                        NavigationLink (destination: AlbumDetail(item: item)) {
+//                                            AlbumItem(album: item)
+//                                        }
+//                                    }
+//                                    //    AlbumRow(items: $vM.Albums)
+//                                }
+//                            }
+//                        }
+                        Section(header: Text("Albums")) {
+                            AlbumRow(items: $vM.Albums)
+                        }
+                        Section(header: Text("Tracks")) {
+                            ForEach(vM.Tracks) { item in
+                                NavigationLink (destination: TrackDetail(item: item)){
+                                    TrackItem(track: item).frame(height: 50)
+                                }
+                            }
+                        }
+                    }
+                }.navigationBarTitle(Text("Featured"))
+                    //.foregroundColor(.black))
             }
             else if vM.viewState == .error  {
                 Text(vM.didError.error)
@@ -47,6 +83,7 @@ struct ScrollViewUIKit : UIViewRepresentable {
     func makeUIView(context: Context) -> UIScrollView {
         //let view = HomeView()
         let control = UIScrollView()
+        
         control.refreshControl = UIRefreshControl()
         control.refreshControl?.addTarget(context.coordinator, action:
             #selector(Coordinator.handleRefreshControl),

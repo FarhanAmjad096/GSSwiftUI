@@ -38,12 +38,12 @@ class HomeVM: ObservableObject {
             didChange.send(self)
         }
     }
-    var Albums = [Album]() {
+    var Albums: [Album] = load("Album.json") {
         didSet {
             self.didChange.send(self)
         }
     }
-    var Tracks = [Track]() {
+    var Tracks: [Track] = load("Track.json") {
         didSet {
             self.didChange.send(self)
         }
@@ -79,7 +79,7 @@ class HomeVM: ObservableObject {
                 case .connectionError:
                     self.didError = ErrorType(error: "ConnectionError")
                 case .authorizationError(let errorJson):
-                    self.didError = ErrorType(error: "authorizationError")
+                    self.didError = ErrorType(error: errorJson.description)
                 case .unknownError:
                     self.didError = ErrorType(error: "unknownError")
                 default:break
@@ -88,6 +88,28 @@ class HomeVM: ObservableObject {
             }
         })
     }
-    
 }
 
+
+// Mark:- Load Json
+func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
+    let data: Data
+    
+    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+    else {
+        fatalError("Couldn't find \(filename) in main bundle.")
+    }
+    
+    do {
+        data = try Data(contentsOf: file)
+    } catch {
+        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+    }
+    
+    do {
+        let decoder = JSONDecoder()
+        return try decoder.decode(T.self, from: data)
+    } catch {
+        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+    }
+}

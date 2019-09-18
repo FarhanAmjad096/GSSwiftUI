@@ -3,4 +3,133 @@
    uuid = "612D73D1-7B58-44BB-98E1-6BAD13DC7645"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C22F3E94-C8C4-4717-9688-2242C8FCBC1E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GSWSwiftUI/Home/Track/TrackRow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "TrackRow"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C642623-29EF-44FB-A3EE-B6A75FDF36ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GSWSwiftUI/Home/HomeVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "requestData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C642623-29EF-44FB-A3EE-B6A75FDF36ED - 8d50289b6ecf9fcc"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (GSWSwiftUI.GSWNwtwork.ApiResult) -&gt; () in GSWSwiftUI.HomeVM.requestData() -&gt; ()"
+                  moduleName = "GSWSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arhamsoft/Desktop/GSSwiftUI/GSWSwiftUI/Home/HomeVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "201">
+               </Location>
+               <Location
+                  uuid = "3C642623-29EF-44FB-A3EE-B6A75FDF36ED - 8d50289b6ecf9fcc"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (GSWSwiftUI.GSWNwtwork.ApiResult) -&gt; () in GSWSwiftUI.HomeVM.requestData() -&gt; ()"
+                  moduleName = "GSWSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arhamsoft/Desktop/GSSwiftUI/GSWSwiftUI/Home/HomeVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "271">
+               </Location>
+               <Location
+                  uuid = "3C642623-29EF-44FB-A3EE-B6A75FDF36ED - 8d50289b6ecf9fcc"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (GSWSwiftUI.GSWNwtwork.ApiResult) -&gt; () in GSWSwiftUI.HomeVM.requestData() -&gt; ()"
+                  moduleName = "GSWSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arhamsoft/Desktop/GSSwiftUI/GSWSwiftUI/Home/HomeVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1708">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57714606-D590-41C4-AC59-D45AE63938A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GSWSwiftUI/Modules/Home/ViewModel/HomeVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "requestData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "57714606-D590-41C4-AC59-D45AE63938A6 - 5e3023af946625b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (GSWSwiftUI.GSWNwtwork.ApiResult) -&gt; () in GSWSwiftUI.HomeVM.requestData() -&gt; ()"
+                  moduleName = "GSWSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arhamsoft/Desktop/GSSwiftUI/GSWSwiftUI/Modules/Home/ViewModel/HomeVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "57714606-D590-41C4-AC59-D45AE63938A6 - 9b7e27aa62875d3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; Swift.Optional&lt;GSWSwiftUI.Album&gt; in closure #2 (GSWSwiftUI.GSWNwtwork.ApiResult) -&gt; () in GSWSwiftUI.HomeVM.requestData() -&gt; ()"
+                  moduleName = "GSWSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arhamsoft/Desktop/GSSwiftUI/GSWSwiftUI/Modules/Home/ViewModel/HomeVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

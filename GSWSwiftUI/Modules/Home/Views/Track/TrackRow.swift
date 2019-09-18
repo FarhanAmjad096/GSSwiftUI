@@ -28,6 +28,6 @@ struct TrackRow: View {
     var body: some View {
         List (items) { item in
             TrackItem(track: item)
-            }
+        }
     }
 }

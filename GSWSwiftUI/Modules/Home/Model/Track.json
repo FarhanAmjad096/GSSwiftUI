@@ -1,0 +1,81 @@
+//
+//  Track.json
+//  GSWSwiftUI
+//
+//  Created by arhamsoft on 18/09/2019.
+//  Copyright © 2019 Muhammad Irfan Zafar. All rights reserved.
+//
+
+import Foundation
+[
+  {
+    "track_album" : "Minutes to Midnight",
+    "name" : "What I've Done",
+    "id" : "1",
+    "track_art_work" : "https:\/\/i.ytimg.com\/vi\/WOHNBNyHXBY\/maxresdefault.jpg",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "Road to Revolution: Live at Milton Keynes",
+    "name" : "Numb Encore",
+    "id" : "2",
+    "track_art_work" : "https:\/\/i.ytimg.com\/vi\/Seg8XBtEsh0\/maxresdefault.jpg",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "Living things",
+    "name" : "Lost in the Echo",
+    "id" : "3",
+    "track_art_work" : "https:\/\/www.lpassociation.com\/upload\/images\/071412-062949_201207101636-linkin.jpg",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "One More Light",
+    "name" : "One More Light",
+    "id" : "4",
+    "track_art_work" : "https:\/\/up-1.cdn-fullscreendirect.com\/production\/photos\/10272\/original\/20171115_175140_10272_1023287.jpeg",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "Meteora",
+    "name" : "From the Inside",
+    "id" : "5",
+    "track_art_work" : "https:\/\/magneto.space\/files\/originals\/m_1281156182_1281156195.jpg",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "Minutes to Midnight",
+    "name" : "Given Up",
+    "id" : "6",
+    "track_art_work" : "https:\/\/i.ytimg.com\/vi\/MUjy3gfibUM\/maxresdefault.jpg",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "Thousand Suns",
+    "name" : "Waiting for the End",
+    "id" : "7",
+    "track_art_work" : "https:\/\/i.ytimg.com\/vi\/-UMQZ0m9KoM\/maxresdefault.jpg",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "Living things",
+    "name" : "Castle of Glass",
+    "id" : "8",
+    "track_art_work" : "https:\/\/upload.wikimedia.org\/wikipedia\/en\/c\/c9\/Linkin_Park_-_Living_Things.jpg",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "Minutes to Midnight",
+    "name" : "Shadow of the Day",
+    "id" : "9",
+    "track_art_work" : "https:\/\/vignette.wikia.nocookie.net\/linkin-park-junior-underground\/images\/8\/82\/Shadow_of_the_Day.jpg\/revision\/latest?cb=20150327053032",
+    "artist" : "linkin park"
+  },
+  {
+    "track_album" : "Meteora",
+    "name" : "Somewhere I Belong",
+    "id" : "10",
+    "track_art_work" : "https:\/\/pre00.deviantart.net\/f452\/th\/pre\/f\/2014\/319\/6\/b\/linkin_park_somewhere_i_belong_by_puguhshinoda-d86jzdv.jpg",
+    "artist" : "linkin park"
+  }
+]

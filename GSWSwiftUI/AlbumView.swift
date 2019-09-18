@@ -32,13 +32,13 @@ struct AlbumItem: View {
                 .frame(width: 155.0, height: 155.0)
                 .cornerRadius(5.0)
             Text(album.name)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .font(.caption)
         }
         .padding(.leading, 15)
         
     }
-}
+    }
 
 /*
  struct AlbumRow_Previews: PreviewProvider {
