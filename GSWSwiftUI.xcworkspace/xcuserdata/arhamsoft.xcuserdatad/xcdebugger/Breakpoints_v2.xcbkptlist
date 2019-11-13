@@ -86,20 +86,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "57714606-D590-41C4-AC59-D45AE63938A6"
+            uuid = "3B079234-00D5-4389-A7AE-1CB3AAC975A7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GSWSwiftUI/Modules/Home/ViewModel/HomeVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "requestData()"
-            landmarkType = "7">
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
-                  uuid = "57714606-D590-41C4-AC59-D45AE63938A6 - 5e3023af946625b"
+                  uuid = "3B079234-00D5-4389-A7AE-1CB3AAC975A7 - 5e3023af946625b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -109,24 +109,24 @@
                   urlString = "file:///Users/arhamsoft/Desktop/GSSwiftUI/GSWSwiftUI/Modules/Home/ViewModel/HomeVM.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "400">
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "915">
                </Location>
                <Location
-                  uuid = "57714606-D590-41C4-AC59-D45AE63938A6 - 9b7e27aa62875d3d"
+                  uuid = "3B079234-00D5-4389-A7AE-1CB3AAC975A7 - a0e3cc34315ff73e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; Swift.Optional&lt;GSWSwiftUI.Album&gt; in closure #2 (GSWSwiftUI.GSWNwtwork.ApiResult) -&gt; () in GSWSwiftUI.HomeVM.requestData() -&gt; ()"
+                  symbolName = "closure #2 (SwiftyJSON.JSON) -&gt; Swift.Optional&lt;GSWSwiftUI.Track&gt; in closure #2 (GSWSwiftUI.GSWNwtwork.ApiResult) -&gt; () in GSWSwiftUI.HomeVM.requestData() -&gt; ()"
                   moduleName = "GSWSwiftUI"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/arhamsoft/Desktop/GSSwiftUI/GSWSwiftUI/Modules/Home/ViewModel/HomeVM.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "48">
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "54">
                </Location>
             </Locations>
          </BreakpointContent>

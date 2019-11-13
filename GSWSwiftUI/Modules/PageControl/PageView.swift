@@ -22,6 +22,7 @@ struct PageView<Page: View>: View {
         }
     }
 }
+
 struct CardView: View {
     var album: Album
     var body: some View {

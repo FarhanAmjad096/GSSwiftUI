@@ -66,6 +66,7 @@ class HomeVM: ObservableObject {
             case .success(let returnJson) :
                 self.Albums = returnJson["Albums"].arrayValue.compactMap {return Album(data: try! $0.rawData())}
                 self.Tracks = returnJson["Tracks"].arrayValue.compactMap {return Track(data: try! $0.rawData())}
+               // let value = returnJson["Tracks"].arrayObject?[""]
                 DispatchQueue.main.async {
                     self.viewState = .dataAvail
                     self.isLoading = false

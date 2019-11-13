@@ -29,7 +29,6 @@ struct AlbumItem: View {
         VStack (alignment: .leading) {
             URLImage(URL(string: album.albumArtWork)!)
                 .resizable()
-                .frame(width: 155.0, height: 155.0)
                 .cornerRadius(5.0)
             Text(album.name)
                 .foregroundColor(.black)

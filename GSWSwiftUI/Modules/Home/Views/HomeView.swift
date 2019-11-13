@@ -9,8 +9,36 @@
 import SwiftUI
 import UIKit
 import Combine
+struct Parent: View {
+    var body: some View {
+        NavigationView {
+            Text("Hello World")
+                .navigationBarItems(
+                    trailing: NavigationLink(destination: Child(), label: { Text("Next") })
+                )
+        }
+    }
+}
+
+struct Child: View {
+    @Environment(\.presentationMode) var presentation
+    var body: some View {
+        Text("Next Hello, World!")
+            .navigationBarItems(
+                leading: Button(
+                    action: {
+                        self.presentation.wrappedValue.dismiss()
+                    },
+                    label: { Text("Back") }
+                )
+            )
+    }
+}
+
+
 struct HomeView: View {
     @ObservedObject var vM = HomeVM()
+    var comment = Comments()
     var body: some View {   
         HStack {
             if vM.viewState == .loading {
@@ -35,18 +63,20 @@ struct HomeView: View {
                 NavigationView {
                     List {
                         PageView(vM.Albums.map { CardView(album: $0) }).frame(height: 250)
-//                        Section(header: Text("New Albums")) {
-//                            ScrollView (.horizontal, showsIndicators: false) {
-//                                HStack {
-//                                    ForEach(vM.Albums) { item in
-//                                        NavigationLink (destination: AlbumDetail(item: item)) {
-//                                            AlbumItem(album: item)
-//                                        }
-//                                    }
-//                                    //    AlbumRow(items: $vM.Albums)
-//                                }
-//                            }
-//                        }
+                        //                        Section(header: Text("New Albums")) {
+                        //                            VStack {
+                        //                                ScrollView (.horizontal, showsIndicators: false) {
+                        //                                    HStack(alignment: .top, spacing: 0)  {
+                        //                                        ForEach(vM.Albums) { item in
+                        //                                            NavigationLink (destination: AlbumDetail(item: item)) {
+                        //                                                AlbumItem(album: item).frame(width: 155.0, height: 155.0)
+                        //                                            }
+                        //                                        }
+                        //                                        //    AlbumRow(items: $vM.Albums)
+                        //                                    }
+                        //                                }
+                        //                            }
+                        //                        }
                         Section(header: Text("Albums")) {
                             AlbumRow(items: $vM.Albums)
                         }
@@ -57,8 +87,17 @@ struct HomeView: View {
                                 }
                             }
                         }
-                    }
-                }.navigationBarTitle("Featured")
+                        NavigationLink (destination:TypePickerView()){
+                            Text("PickerView")
+                        }
+                        NavigationLink (destination: ScoreView().environmentObject(comment)){
+                            Text("Environment Object")
+                        }
+                        NavigationLink(destination: Alert_Actions()) {
+                            Text("Alert and ActionSheet")
+                        }
+                    }.navigationBarTitle(Text("Featured"))
+                }
             }
             else if vM.viewState == .error  {
                 Text(vM.didError.error)
